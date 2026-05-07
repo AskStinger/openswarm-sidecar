@@ -1,4 +1,10 @@
-# OpenSwarm
+# OpenSwarm — AskStinger fork
+
+> **AskStinger fork notice:** this repository is a GPL-3.0 fork of [`unohee/OpenSwarm`](https://github.com/unohee/OpenSwarm) used as an arms-length sidecar process by [`AskStinger/Agent`](https://github.com/AskStinger/Agent) per its **ADR 0007**. AskStinger calls only the HTTP shim documented in [`sidecar/README.md`](sidecar/README.md); the Python codebase never imports OpenSwarm source. Upstream is held at a specific commit (see [`ASKSTINGER_PIN.md`](ASKSTINGER_PIN.md)) and bumped only via reviewed PR.
+>
+> All upstream documentation below is preserved verbatim from the pinned release.
+
+---
 
 [![npm version](https://img.shields.io/npm/v/@intrect/openswarm.svg)](https://www.npmjs.com/package/@intrect/openswarm)
 [![npm downloads](https://img.shields.io/npm/dm/@intrect/openswarm.svg)](https://www.npmjs.com/package/@intrect/openswarm)

@@ -39,7 +39,9 @@
     "service:logs": "bash scripts/manage-service.sh logs stdout",
     "service:errors": "bash scripts/manage-service.sh logs stderr",
     "browser:install": "bash scripts/install-browser-launcher.sh",
-    "browser:uninstall": "bash scripts/uninstall-browser-launcher.sh"
+    "browser:uninstall": "bash scripts/uninstall-browser-launcher.sh",
+    "sidecar": "node --import=tsx sidecar/server.ts",
+    "sidecar:health": "node -e \"fetch(process.env.URL||'http://127.0.0.1:7474/health').then(r=>r.json()).then(j=>{console.log(j);process.exit(j.status==='alive'?0:1)}).catch(e=>{console.error(e);process.exit(1)})\""
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.72.1",
